@@ -133,6 +133,8 @@ def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     model = PeptideModel.load_from_checkpoint(args.sm,
+                                            strict=False,
+                                            weights_only=False,
                                             n_layers=args.n_layers,
                                             d_model=args.d_model,
                                             d_hidden=args.d_hidden,
