@@ -98,7 +98,7 @@ def main(args):
     print(device)
     model = PeptideModel.load_from_checkpoint(args.sm,
                                               strict=False,
-                                                weights_only=False,
+                                              weights_only=False,
                                               n_layers=args.n_layers,
                                               d_model=args.d_model,
                                               d_hidden=args.d_hidden,
