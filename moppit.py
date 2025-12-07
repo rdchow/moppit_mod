@@ -6,7 +6,7 @@ from argparse import ArgumentParser
 import numpy as np
 import torch
 import os
-
+torch.serialization.add_safe_globals([np.core.multiarray.scalar,np._core.multiarray.scalar])
 AA = 'ARNDCEQGHILKMFPSTWYV'
 
 
